@@ -1,0 +1,20 @@
+{
+  "docker": {
+    "pinDigests": true
+  },
+  "regex": {
+    "pinDigests": true
+  },
+  "regexManagers": [
+    {
+      "datasourceTemplate": "docker",
+      "description": "test",
+      "fileMatch": [
+        ".*\\.sh$"
+      ],
+      "matchStrings": [
+        "(?<depName>novas0x2a/[^: \\n]+):(?<currentValue>[^@ \\n]+)(@(?<currentDigest>sha256:[a-f0-9]+))?"
+      ]
+    }
+  ]
+}
